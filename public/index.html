@@ -10,6 +10,11 @@
 
     <title>SMS Colors</title>
 </head>
+<!-- REACT ENTERY POINT -->
+<div id="root" ></div>
+<!-- REACT ENTERY POINT -->
+
+
 <body id="body">
     <div id="page" class="page">
 
@@ -79,9 +84,7 @@
 </div>
  
 
-<button class="btn">
-        Notification <span class="badge badge-primary"></span>
-</button>
+
 
 
 <div class="container ">  
@@ -110,8 +113,20 @@
   <input v-model="message">
     
   </div> -->
-
-
+  <div class='parent'>
+    <span id='draggableSpan'
+      draggable='true'
+      ondragstart='onDragStart(event);'>
+        draggable
+    </span>
+  
+    <span
+      ondragover='onDragOver(event);'
+      ondrop='onDrop(event);'>
+        dropzone
+    </span>
+  </div>
+  
 
    <div class="section footer-container">
         <div class="footer">
@@ -131,6 +146,39 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
      <script src="client.js"></script>
+     <script>
+     function onDragStart(event) {
+  event
+    .dataTransfer
+    .setData('text/plain', event.target.id);
+
+  event
+    .currentTarget
+    .style
+    .backgroundColor = 'yellow';
+}
+function onDragOver(event) {
+  event.preventDefault();
+}
+
+function onDrop(event) {
+  const id = event
+    .dataTransfer
+    .getData('text');
+
+  const draggableElement = document.getElementById(id);
+  const dropzone = event.target;
+  
+  dropzone.appendChild(draggableElement);
+
+  event
+    .dataTransfer
+    .clearData();
+}
+
+     </script>
+
+<script src="index.js"></script>
     
 </body>
 </html>
