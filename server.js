@@ -120,18 +120,18 @@ app.get("/startcolor", (req, res) => {
   );
 });
 
-function fiveColorArray() {
-  let fiveColors = [];
-  for (let i = 1; i <= 5; i += 1) {
-    let randomElement = getRandomInt(CssColorNames.length - 1);
-    fiveColors.push(CssColorNames[randomElement]);
-  }
-  return fiveColors;
-}
+// function fiveColorArray() {
+//   let fiveColors = [];
+//   for (let i = 1; i <= 5; i += 1) {
+//     let randomElement = getRandomInt(CssColorNames.length - 1);
+//     fiveColors.push(CssColorNames[randomElement]);
+//   }
+//   return fiveColors;
+// }
 
-function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max));
-}
+// function getRandomInt(max) {
+//   return Math.floor(Math.random() * Math.floor(max));
+// }
 
 // client.messages.list({limit: 3})
 //                .then(messages => messages.forEach(m =>

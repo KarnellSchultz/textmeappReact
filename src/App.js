@@ -1,9 +1,10 @@
 import React from 'react'
+import Page from './Page'
 
 export default function App() {
     return (
-        <div>
-            <h1>YO</h1>
-        </div>
+        <>
+            <Page />
+        </>
     )
 }
