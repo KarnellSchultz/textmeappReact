@@ -19,7 +19,6 @@ async function init() {
 
 // pageElement.style.background = color;
 // upcomingcolor.innerHTML = color;
-updateButton.addEventListener('click', updateColors);
 
 async function updateColors() {
 	let colorData = await fetch('/colors');

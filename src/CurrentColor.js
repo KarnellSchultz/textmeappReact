@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function CurrentColor() {
+export default function CurrentColor({pageColor}) {
     return (
         <div>
             <table class="table table-striped table-dark">
@@ -16,7 +16,7 @@ export default function CurrentColor() {
     <tr>
       <th scope="row">1</th>
       <td>Mark</td>
-      <td>Otto</td>
+      <td>{pageColor}</td>
       <td>blah blah</td>
     </tr>
     <tr>

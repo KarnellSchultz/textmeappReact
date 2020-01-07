@@ -10,3 +10,7 @@ const Emoji = props => (
     </span>
 );
 export default Emoji;
+
+// <Emoji symbol="🐑" label="sheep"/>
+// or
+// <Emoji symbol="🐑"/>

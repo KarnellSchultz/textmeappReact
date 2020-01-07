@@ -5,20 +5,27 @@ import CurrnetColorContainer from './CurrnetColorContainer';
 // import EnterColorContainer from './EnterColorContainer';
 
 export default function Page() {
-	const [pageColor, setPageColor] = useState('');
+	const [pageColor, setPageColor] = useState('BlanchedAlmond');
 
-	const getColors = () => {
-		fetch('/startcolor')
-			.then(response => {
-				return response.json();
-			})
-			.then(myJson => {
-				console.log(myJson);
-				setPageColor(myJson);
-			});
-	};
+	// const getColors = () => {
+	// 	fetch('/startcolor')
+	// 		.then(response => {
+	// 			return response.json();
+	// 		})
+	// 		.then(myJson => {
+	// 			console.log(myJson);
+	// 			setPageColor(myJson);
+	// 		});
+	// };
 
-	useEffect(() => {}, [pageColor]);
+    // useEffect(() => {}, [pageColor]);
+    
+    // setPageColor('BlanchedAlmond')
+
+    const pageElement = document.getElementById('body');
+
+    pageElement.style.background = pageColor;
+
 	return (
 		<>
 			<div className="container-fluid text-center ">
@@ -27,8 +34,8 @@ export default function Page() {
 				<h3>Step 3</h3>
 				<MoreColorsContainer />
 				{/* <EnterColorContainer /> */}
-				<CurrnetColorContainer />
-				<button onClick={getColors}>press</button>
+				<CurrnetColorContainer pageColor={pageColor}  />
+				{/* <button onClick={getColors}>press</button> */}
 			</div>
 		</>
 	);
