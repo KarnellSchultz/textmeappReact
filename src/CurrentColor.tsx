@@ -1,9 +1,13 @@
 import React from 'react'
 
-export default function CurrentColor({pageColor}) {
+type Props = {
+  pageColor: string;
+}
+
+export default function CurrentColor({pageColor}: Props ) {
     return (
         <div>
-            <table class="table table-striped table-dark">
+            <table className="table table-striped table-dark">
   <thead>
     <tr>
       <th scope="col">#</th>
