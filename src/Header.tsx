@@ -3,11 +3,11 @@ import React from 'react'
 export default function Header() {
     return (
         <>
-            <div class="nav-container">
-            <div class="nav">
-              <div class="brand">
+            <div className="nav-container">
+            <div className="nav">
+              <div className="brand">
               </div>
-              <div class="links">
+              <div className="links">
                 <a
                   href="https://glitch.com/@karnellschultz"
                   target="_blank"
@@ -28,8 +28,8 @@ export default function Header() {
               </div>
             </div>
           </div>
-          <div class="section header">
-            <h1 class="h1">SMS Colors App</h1>
+          <div className="section header">
+            <h1 className="h1">SMS Colors App</h1>
       </div>
         </>
     )

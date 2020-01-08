@@ -2,7 +2,12 @@ import React, { useState, useEffect } from 'react';
 import StepOne from './StepOne';
 import MoreColorsContainer from './MoreColorsContainer';
 import CurrnetColorContainer from './CurrnetColorContainer';
+import Header from './Header';
 // import EnterColorContainer from './EnterColorContainer';
+
+// type Props = {
+
+// }
 
 export default function Page() {
 	const [pageColor, setPageColor] = useState('BlanchedAlmond');
@@ -22,12 +27,15 @@ export default function Page() {
     
     // setPageColor('BlanchedAlmond')
 
-    const pageElement = document.getElementById('body');
 
-    pageElement.style.background = pageColor;
+	// const pageElement: HTMLElement = document.getElementById('body');
+	
+
+    // pageElement.style.background = pageColor;
 
 	return (
 		<>
+		<Header />
 			<div className="container-fluid text-center ">
 				<StepOne />
 				<h3>Step 2</h3>

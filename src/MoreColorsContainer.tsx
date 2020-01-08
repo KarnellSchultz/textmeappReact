@@ -4,12 +4,18 @@ import { getRandomInt } from './Utils/RandomNumber';
 import MoreColors from './MoreColors';
 
 //   fiveColorArray()
+type State = {
+	colorList: string[];
+	setColorList: string[];
+	
+}
 
 export default function MoreColorsContainer() {
-	const [colorList, setColorList] = useState([]);
+	const initalState: string[] = []
+	const [colorList, setColorList] = useState(initalState);
 
 	function buildColorsArray() {
-		let colorsArr = [];
+		let colorsArr: string[] = [];
 		for (let i = 0; i < 5; i++) {
 			let num = getRandomInt(CssColorNames.length - 1);
 			colorsArr.push(CssColorNames[num]);
