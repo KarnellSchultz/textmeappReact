@@ -12,37 +12,37 @@ import Header from './Header';
 export default function Page() {
 	const [pageColor, setPageColor] = useState('BlanchedAlmond');
 
-	// const getColors = () => {
-	// 	fetch('/startcolor')
-	// 		.then(response => {
-	// 			return response.json();
-	// 		})
-	// 		.then(myJson => {
-	// 			console.log(myJson);
-	// 			setPageColor(myJson);
-	// 		});
-	// };
+	const getColors = () => {
+		fetch('/startcolor')
+			.then(response => {
+				return response.json();
+			})
+			.then(myJson => {
+				console.log(myJson);
+				setPageColor(myJson);
+			});
+	};
 
-    // useEffect(() => {}, [pageColor]);
-    
-    // setPageColor('BlanchedAlmond')
+	useEffect(() => {
+		setPageColor('BlanchedAlmond');
+		getColors();
+	}, []);
 
-
-	// const pageElement: HTMLElement = document.getElementById('body');
-	
-
-    // pageElement.style.background = pageColor;
+	const pageElement: HTMLElement | null = document.getElementById('body');
+	if (pageElement) {
+		pageElement.style.background = pageColor;
+	}
 
 	return (
 		<>
-		<Header />
+			<Header />
 			<div className="container-fluid text-center ">
 				<StepOne />
 				<h3>Step 2</h3>
 				<h3>Step 3</h3>
 				<MoreColorsContainer />
 				{/* <EnterColorContainer /> */}
-				<CurrnetColorContainer pageColor={pageColor}  />
+				<CurrnetColorContainer pageColor={pageColor} />
 				{/* <button onClick={getColors}>press</button> */}
 			</div>
 		</>
