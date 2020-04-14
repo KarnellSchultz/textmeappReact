@@ -6,8 +6,6 @@ Want to see the code : `https://glitch.com/edit/#!/smscolors`
 
 This project app uses the Twilio API to allow users to send a text message to `+14257287345`, then have that text message edit the color of the pages background.
 
-The app also uses Vue.js to display possible Css colors that users can use to update the page.
-
 On the front-end,
 public/
 Index.html is the main html file
