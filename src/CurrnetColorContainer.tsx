@@ -1,20 +1,20 @@
-import React from 'react';
-import CurrentColor from './CurrentColor';
+import React from "react";
+import CurrentColor from "./CurrentColor";
 
 type Props = {
-	pageColor: string;
+  pageColor: string;
 };
 
 export default function CurrnetColorContainer({
-	pageColor = 'cornsilk',
+  pageColor = "paleyellow",
 }: Props) {
-	// const [recentColors, setRecentColors] = useState('');
+  // const [recentColors, setRecentColors] = useState('');
 
-	return (
-		<div className="container-sm">
-			<CurrentColor pageColor={pageColor} />
-		</div>
-	);
+  return (
+    <div className="container-sm">
+      <CurrentColor pageColor={pageColor} />
+    </div>
+  );
 }
 
 //  /startcolor

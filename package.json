@@ -1,54 +1,55 @@
 {
-	"name": "textme",
-	"version": "1.1.0",
-	"description": "refactored version of the SMS app using react",
-	"main": "client.js",
-	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject"
-	},
-	"keywords": [
-		"sms",
-		"twillio",
-		"js",
-		"node",
-		"express",
-		"glitch"
-	],
-	"eslintConfig": {
-		"extends": "react-app"
-	},
-	"author": "Karnell Schultz",
-	"license": "MIT",
-	"dependencies": {
-		"@types/jest": "^24.9.1",
-		"@types/node": "^13.9.3",
-		"@types/react-dom": "^16.9.5",
-		"dotenv": "^8.2.0",
-		"express": "^4.17.1",
-		"nedb": "^1.8.0",
-		"nodemon": "^1.19.4",
-		"react": "^16.13.1",
-		"react-dom": "^16.13.1",
-		"styled-components": "^4.4.1",
-		"twilio": "^3.41.1",
-		"typescript": "^3.8.3"
-	},
-	"devDependencies": {
-		"@types/react": "^16.9.25",
-		"react-scripts": "^3.4.1"
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 firefox version",
-			"last 1 chrome version"
-		]
-	}
+  "name": "textme",
+  "version": "1.1.0",
+  "description": "refactored version of the SMS app using react",
+  "main": "client.js",
+  "proxy": "http://localhost:3007",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "keywords": [
+    "sms",
+    "twillio",
+    "js",
+    "node",
+    "express",
+    "glitch"
+  ],
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "author": "Karnell Schultz",
+  "license": "MIT",
+  "dependencies": {
+    "@types/jest": "^24.9.1",
+    "@types/node": "^13.9.3",
+    "@types/react-dom": "^16.9.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nedb": "^1.8.0",
+    "nodemon": "^2.0.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^4.4.1",
+    "twilio": "^3.41.1",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.25",
+    "react-scripts": "^3.4.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 firefox version",
+      "last 1 chrome version"
+    ]
+  }
 }
